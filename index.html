@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <title>SGS GrokHi - กรอกให้!</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="mt-3 container">
+        <h2 class="text-center">️Grok Hi!</h2>
+        <h3 class="text-center">กรอกง่าย แค่ปลายนิ้ว ✌️</h3>
+
+        <hr>
+
+        <div class="m-2">
+            <p class="fw-bold">วิธีใช้งาน</p>
+            <p class="m-0 p-0">1. Copy คะแนนใน ​Excel</p>
+            <p class="m-0 p-0">2. เปิด SGS แล้วนำ Cursor วางในช่อง</p>
+            <p class="m-0 p-0">3. กด Shift + G เพื่อกรอกคะแนน</p>
+        </div>
+        <hr>
+
+        <div class="text-center">
+            <p id="rowAndCol" class="fw-bold fs-5"></p>
+            <div class="form-check d-inline-block">
+                <input class="form-check-input" type="checkbox" value="yes" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    แสดงหน้าต่างด้านบนเสมอ
+                </label>
+            </div>
+        </div>
+
+        <div class="text-center mt-2">
+            <div id="loading-spinner" class="invisible">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden"></span>
+                </div>
+            </div>
+            <div>
+                <img src="images/cat.png" height="50px" class="mb-1">
+                <p id="loading-text" class="invisible">กำลัง Grokhi!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./renderer.js"></script>
+    <script>
+  
+    </script>
+</body>
+
+</html>
