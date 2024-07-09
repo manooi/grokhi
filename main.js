@@ -1,5 +1,5 @@
 const { app, BrowserWindow, ipcMain, clipboard, globalShortcut } = require('electron')
-const { keyboard } = require('@nut-tree/nut-js');
+const { keyboard } = require('@nut-tree-fork/nut-js');
 const path = require('node:path')
 
 let mainWindow;
@@ -37,7 +37,6 @@ app.whenReady().then(() => {
     ipcMain.handle('getClipboardText', () => clipboard.readText('selection'));
     ipcMain.handle('updateClipboardText', (event, text) => {
         resultText = text;
-        // console.log("updated");
     });
 
     ipcMain.handle('setAlwaysOnTop', (event, flag)=> {
